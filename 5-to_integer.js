@@ -4,8 +4,8 @@ const arg = process.argv[2];
 
 myNumber = Number(arg);
 
-if (isNaN(myNumber)){
-    console.log('Not a number');
-}else{
-    console.log(myNumber);
+if (!isNaN(myNumber) && Number.isInteger(myNumber)) {
+  console.log(`My number: ${myNumber}`);
+} else {
+  console.log("Not a number");
 }
